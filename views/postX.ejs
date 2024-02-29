@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>posts</title>
+    <link rel="stylesheet" href="/stylesheets/blog.css" />
+</head>
+<body>
+    
+    <!-- Show legit posts with update feature -->
+    <% if (locals.postGrid && postGrid.length!=0) {%>
+        <div class="complete">
+            <form action="/Your-world" method="post">
+            <h1><%= postGrid[flag].title %></h1>
+            <input type="text" name="titlex" value="<%= postGrid[flag].title %>" hidden>
+            <h2><%= postGrid[flag].author %></h2>
+            <input type="text" name="authorx" value="<%= postGrid[flag].author %>" hidden>
+            <p><%= postGrid[flag].content %></p>
+            <input type="text" name="contentx" value="<%= postGrid[flag].content %>" hidden>
+            <input type="number" name="flagx" value="<%= flag %>" hidden>
+            <input type="text" name="key" value="update" hidden>
+            <button type="submit">Update</button>
+            </form>
+
+            <!-- Post delete feature -->
+            <form action="/Your-world" method="post">
+                <input type="number" name="flag" value="<%= flag %>" hidden>
+                <input type="text" name="key" value="delete" hidden>
+                <button id="delete">Delete</button>
+            </form>
+        </div>
+    <% } %>
+
+    <!-- Show default posts -->
+    <% if(locals.defaultPost) { %>
+        <div class="complete">
+           <% if (sign==='x') { %>
+        <h1><%= defaultPost[0].defTitle %></h1>
+        <h2><%= defaultPost[0].defAuthor %></h2>
+        <p><%= defaultPost[0].defContent %></p>
+        <% }else { %>
+            <h1><%= defaultPost[1].defTitle %></h1>
+            <h2><%= defaultPost[1].defAuthor %></h2>
+            <p><%= defaultPost[1].defContent %></p>
+            <% } %> 
+        </div>
+    <% } %>
+    
+</body>
+</html>

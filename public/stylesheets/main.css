@@ -1,0 +1,139 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 4rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 20px;
+}
+
+.form-box {
+    width: 50%;
+    margin: 30px auto 0px auto;
+    padding: 30px 50px 30px 30px ;
+    background-color: aquamarine;
+}
+
+input {
+    width: 99%;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 5px 0px 30px 0px;
+    border: 0px;
+    outline: none;
+}
+
+textarea {
+    width: 99%;
+    height: 150px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border: 0px;
+    outline: none;
+}
+
+#submit {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+    font-weight: bold !important;
+    background-color: aquamarine;
+    border: 2px solid black;
+    margin-top: 15px;
+}
+
+label {
+    font-weight: 600;
+}
+
+hr {
+    margin-top: 70px;
+    width: 40%;
+}
+
+.post-grid {
+    width: 80%;
+    margin: 70px auto 50px auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.posts {
+    border: 0px;
+    padding: 20px;
+    background-color: rgb(234, 234, 234);
+}
+
+.posts > p {
+    font-size: 0.9rem;
+}
+
+.posts:hover {
+    box-shadow:0px 0px 10px -1px rgb(143, 143, 143);
+}
+
+.posts button:hover {
+    border: 2px solid palevioletred;
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 8rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    .form-box {
+        width: 80%;
+        padding: 50px 70px 50px 50px;
+    }
+    input {
+        height: 80px;
+        font-size: 2.2rem;
+        margin: 15px 0px 50px 0px;
+    }
+    textarea {
+        font-size: 2.2rem;
+        height: 300px;
+        margin: 15px 0px 50px 0px;
+    }
+    label {
+        font-size: 2.5rem;
+    }
+    #submit {
+        width: 250px;
+        height: 90px;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    hr {
+        border-width: 5px;
+        width: 70%;
+        margin-top: 200px;
+    }
+    .post-grid {
+        width: 85%;
+        grid-template-columns: 1fr;
+        gap: 80px;
+        margin-top: 150px;
+    }
+    .posts {
+        padding: 40px;
+    }
+    .posts button {
+        font-size: 2.2rem;
+        padding: 15px 25px 15px 25px;
+        margin-top: 25px;
+    }
+}
